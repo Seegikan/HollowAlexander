@@ -9,7 +9,8 @@ using UnityEngine;
 public class MovementPlayer : MonoBehaviour
 {
     //Variables 
-
+    public Transform transformPlayer;
+    public Rigidbody2D rigidbodyPlayer;
 
     // donde empieza el Frame 1. Frame 2 dejo de llamarse 
     void Start()
@@ -25,6 +26,12 @@ public class MovementPlayer : MonoBehaviour
     void Update()
     {
         print("Update inicia aqui");
+        if(Input.GetKeyDown (KeyCode.A))
+        {
+            //transformPlayer.position += new Vector3(1,0,0);
+            //transformPlayer.position +=  Vector3.right * 1f;
+            rigidbodyPlayer.AddForce(Vector2.right);
+        }
 
     }//end Update
 
