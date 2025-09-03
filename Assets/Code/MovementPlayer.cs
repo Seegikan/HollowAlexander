@@ -6,17 +6,28 @@ using UnityEngine;
 //class - forma de declararla 
 //MovementPlayer - Nombre del Script
 // : - Herencia, permite usar las funciones y variables de  MonoBehaviour
+/// <summary>
+/// Alexander 03 Sep 2025
+/// Movimiento de player
+/// 
+/// </summary>
+
 public class MovementPlayer : MonoBehaviour
 {
     //Variables 
     public Transform transformPlayer;
-    public Rigidbody2D rigidbodyPlayer;
 
+    public Rigidbody2D rigidBody2DPlayer;
+        /*
+    public Transform transformPlayer;
+    public Rigidbody2D rigidbodyPlayer;
+        */
     // donde empieza el Frame 1. Frame 2 dejo de llamarse 
     void Start()
     {
         print("Start inicia aqui");
-
+        //Jala el rb del objeto
+        rigidBody2DPlayer = GetComponent<Rigidbody2D>();
     }//end Start
 
 
@@ -25,6 +36,23 @@ public class MovementPlayer : MonoBehaviour
     //Funciona mejor o peor dependiente de la PC, no tiene la
     void Update()
     {
+        //Movimiento Izq
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            print("Vamos a la izq");
+
+            //Ignora las fisicas 
+            //transformPlayer.position += new Vector3(-1f,0f,0f);
+
+        }
+
+        //Movimiento Der
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            print("Vamos a la Der");
+            //transformPlayer.position +=  Vector3.right;
+        }
+        /*
         print("Update inicia aqui");
         if(Input.GetKeyDown (KeyCode.A))
         {
@@ -32,6 +60,7 @@ public class MovementPlayer : MonoBehaviour
             //transformPlayer.position +=  Vector3.right * 1f;
             rigidbodyPlayer.AddForce(Vector2.right);
         }
+        */
 
     }//end Update
 
