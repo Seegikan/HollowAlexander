@@ -18,10 +18,7 @@ public class MovementPlayer : MonoBehaviour
     public Transform transformPlayer;
 
     public Rigidbody2D rigidBody2DPlayer;
-        /*
-    public Transform transformPlayer;
-    public Rigidbody2D rigidbodyPlayer;
-        */
+       
     // donde empieza el Frame 1. Frame 2 dejo de llamarse 
     void Start()
     {
@@ -62,6 +59,11 @@ public class MovementPlayer : MonoBehaviour
         }
         */
 
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            rigidBody2DPlayer.AddForce(Vector2.up);
+        }
+
     }//end Update
 
 
@@ -70,6 +72,13 @@ public class MovementPlayer : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag(GameConstants.Tags.Ground)){
 
+
+
+        }
+    }
 
 }//end class
