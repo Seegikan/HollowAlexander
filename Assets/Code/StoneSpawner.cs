@@ -23,10 +23,11 @@ public class StoneSpawner : MonoBehaviour
         }
     }
 
-    [ContextMenu("Do Something")]
+    [ContextMenu("Instantiate")]
     private void InstantieGeoCoin()
     {
         countSpawners++; 
+
         Instantiate(stonePrefab, transform.position + Random.insideUnitSphere * 0.5f, Quaternion.identity);
     }
 }

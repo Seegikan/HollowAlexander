@@ -26,6 +26,7 @@ public class FlyEnemie : MonoBehaviour
         {
             playerPosition = collision.transform.position;
             followingPlayer = true;
+            //Vector2.Distance(transform.position, playerPosition);
         }
     }
 

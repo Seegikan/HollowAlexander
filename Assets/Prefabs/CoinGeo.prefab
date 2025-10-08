@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6553515041712286035}
   - component: {fileID: 4843426457161708596}
   - component: {fileID: 5691886036844127884}
-  - component: {fileID: 7611682510586167934}
   m_Layer: 0
   m_Name: CoinGeo
   m_TagString: Untagged
@@ -167,16 +166,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceMagnitude: 5
---- !u!114 &7611682510586167934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7745396998575348115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a619e69596ffd94d96c9df9e5929399, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceMagnitude: 1

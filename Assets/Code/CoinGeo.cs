@@ -11,7 +11,6 @@ public class CoinGeo : MonoBehaviour
         rb.AddForce(randomDirection * forceMagnitude, ForceMode2D.Impulse);
     }
 
-    [ContextMenu("Do Something")]
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
